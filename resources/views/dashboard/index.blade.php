@@ -1,10 +1,5 @@
 @extends('layout')
 
-@php
-    $search = request('search');
-    $list = request('list');
-@endphp
-
 @section('content')
     <div>
         <div>
@@ -12,10 +7,11 @@
                 <div class="input-form">
                     <label for="list">List shown : </label>
                     <select name="list" id="list">
-                        <option value="10">10</option>
-                        <option value="25">25</option>
-                        <option value="50">50</option>
-                        <option value="100">100</option>
+                        @for ($i = 10; $i <= 100; $i++)
+                            <option value="{{ $i }}" {{ request('list') == $i ? 'selected' : '' }}>
+                                {{ $i }}
+                            </option>
+                        @endfor
                     </select>
                 </div>
                 <div class="input-form">
@@ -26,8 +22,8 @@
             </form>
         </div>
         <div>
-            <p>Your Search : {{ $search ?: "empty" }}</p>
-            <p>List shown : {{ $list ?: 10 }}</p>
+            <p>Your Search : {{ request('search') ?: "empty" }}</p>
+            <p>List shown : {{ request('list') ?: 10 }}</p>
             @if (session('success'))
                 <div style="margin: 5px 0; color: green;">
                     {{ session('success') }}
