@@ -17,6 +17,10 @@ class AuthorSeeder extends Seeder
         $faker = Faker::create();
         $authors = [];
 
+        // If this seeder can't produce 1,000 data entries in the database,
+        // you can try generating data in smaller quantities.
+        // For example, 10, 50, 100, 1000, etc.
+
         for ($i = 0; $i < 1000; $i++) {
             $authors[] = [
                 'name' => $faker->name,

@@ -2,11 +2,9 @@
 
 Client Scenario: John Doe Bookstore
 
-John Doe, our client, owns a bookstore business. His primary revenue streams come from renting or selling books. To enhance customer experience, he wants to recap his entire book collection and sort it based on popularity. The goal is to provide customers with suggestions for the most popular books or authors, making their book-buying or borrowing experience more enjoyable.
+John Doe, owner of a bookstore, wants to improve customer experience by organizing his book collection based on popularity. This will help suggest the most popular books or authors to customers, making it easier for them to buy or rent.
 
 ## Tech Stack
-
-**Client:** Bootstrap v5.3
 
 **Server:** Laravel 10, PHP 8.1, MySQL
 

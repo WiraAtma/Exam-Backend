@@ -20,6 +20,10 @@ class BookSeeder extends Seeder
         $categoryIds = range(1, 3000);
         
         $books = [];
+         // If this seeder is unable to produce 100,000 entries of fake data in the database,
+        // you can try generating data in smaller quantities.
+        // For example, 10, 50, 100, 1000, etc.
+        
         for ($i = 0; $i < 100000; $i++) {
             $books[] = [
                 'title' => $faker->sentence(3),

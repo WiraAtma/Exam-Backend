@@ -16,6 +16,10 @@ class RatingSeeder extends Seeder
     {
         $faker = Faker::create();
         $batchSize = 1000;
+
+        // If this seeder can't produce 500,000 data entries in the database,
+        // you can try generating data in smaller quantities.
+        // For example, 10, 50, 100, 1000, etc.
         $totalRatings = 500000;
 
         for ($i = 0; $i < $totalRatings; $i += $batchSize) {

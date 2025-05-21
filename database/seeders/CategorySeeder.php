@@ -17,6 +17,10 @@ class CategorySeeder extends Seeder
         $faker = Faker::create();
         $categories = [];
 
+        // If this seeder can't produce 3,000 data entries in the database,
+        // you can try generating data in smaller quantities.
+        // For example, 10, 50, 100, 1000, etc.
+
         for ($i = 0; $i < 3000; $i++) {
             $categories[] = [
                 'name' => $faker->word,
