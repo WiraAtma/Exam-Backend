@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('title');
             $table->foreignId('author_id')->constrained();
             $table->foreignId('category_id')->constrained();
+            $table->decimal('average_rating', 5, 2)->default(0.0);
+            $table->unsignedInteger('rating_voter')->default(0);
             $table->timestamps();
         });
     }

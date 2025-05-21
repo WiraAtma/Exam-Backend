@@ -15,7 +15,7 @@ class RatingSeeder extends Seeder
     public function run(): void
     {
         $faker = Faker::create();
-        $batchSize = 1000; // insert 1000 per sekali query
+        $batchSize = 1000;
         $totalRatings = 500000;
 
         for ($i = 0; $i < $totalRatings; $i += $batchSize) {

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [BookController::class, 'index']);
+Route::get('/top-author', [BookController::class, 'topAuthor']);
+Route::get('/form-rating', [BookController::class, 'formRating']);
+Route::get('/form-rating/{authorId}', [BookController::class, 'getBooksByAuthor']);
+Route::post('/add-rating', [BookController::class, 'store']);
+
