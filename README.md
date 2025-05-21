@@ -1,12 +1,3 @@
-- Schema Database Bisa Langsung Command "php artisan migrate"
-
-- Data Faker di Seeder Bisa Dilakukan satu per satu sesuai dengan Nomor Langkah untuk mengurangi terjadinya overload Memory atau Error :
-1. AuthorSeeder.php "php artisan db:seed --class=AuthorSeeder"
-2. CategorySeeder.php "php artisan db:seed --class=CategorySeeder"
-3. RatingSeeder.php "php artisan db:seed --class=RatingSeeder" Atau Jika Terjadi Memory Issue Maka Bisa Dijalankan Dengan memory yang lebih besar "php -d memory_limit=1G artisan db:seed --class=RatingSeeder"
-4. BookSeeder.php "php artisan db:seed --class=BookSeeder"
-
-
 # Timedoor Backend Programming Exam 2025
 
 Client Scenario: John Doe Bookstore
