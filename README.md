@@ -62,19 +62,32 @@ php artisan migrate
 
 Seeding dummy/fake data:
 
-```bash
-php artisan db:seed --class=AuthorSeeder
-php artisan db:seed --class=CategorySeeder
-php artisan db:seed --class=RatingSeeder
-php artisan db:seed --class=BookSeeder
-```
+-   Author Seeder:
+    ```bash
+    php artisan db:seed --class=AuthorSeeder
+    ```
+    Category Seeder:
+    ```bash
+    php artisan db:seed --class=AuthorSeeder
+    ```
+    Rating Seeder:
+    ```bash
+    php artisan db:seed --class=RatingSeeder
+    ```
+    -
+      Recommendation : If You Encounter Issues With Seeding (Memory Errors) RatingSeeder Process, You Can Increase PHP Memory Limit:
+      ```bash
+      php -d memory_limit=1G artisan db:seed --class=RatingSeeder
+      ```
+    -
+    Book Seeder:
+    ⚠️ First make sure the rating has been filled in or there is no failure during the process.
+    ```bash
+    php artisan db:seed --class=BookSeeder
+    ```
+    Note : The Book Seeder process will take a few minutes depending on the memory speed.
 
-⚠️ If You Encounter Issues With Seeding Process (Memory Errors / Slow Performance)
-You can increase the PHP memory limit using this command:
-```bash
-php -d memory_limit=1G artisan db:seed --class=RatingSeeder
-php -d memory_limit=1G artisan db:seed --class=BookSeeder
-```
+-   
 
 Serve the project:
 
